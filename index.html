@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="http://code.angularjs.org/angular-1.0.0rc10.min.js"></script>
+  </head>
+  <script type="text/javascript">
+  	function ActivitiesListCtrl($scope) { 
+  $scope.activities = [ 
+    { "name": "Wake up" }, 
+    { "name": "Brush teeth" }, 
+    { "name": "Shower1" }, 
+    { "name": "Have breakfast" }, 
+    { "name": "Go to work" }, 
+    { "name": "Write a Nettuts article" }, 
+    { "name": "Go to the gym" }, 
+    { "name": "Meet friends" }, 
+    { "name": "Go to bed" } 
+  ]; 
+ } 
+  </script>
+<body ng-controller="ActivitiesListCtrl"> 
+  <h1>Today's activities</h1> 
+  <ul> 
+   <li ng-repeat="activity in activities|orderBy: sortModel""> 
+     {{activity.name}} 
+   </li> 
+  </ul> 
+
+  <h3>Sort:</h3> 
+<select ng-model="sortModel"> 
+   <option value="name">Alphabetically</option> 
+ </select> 
+</body> 
+</html> 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>数据绑定</title>
+	<style>
+	.box{
+		background: #333;
+		color: #fff;
+		width: 200px;
+		height: 200px;
+		border:2px solid #fff;
+	}
+	</style>
+</head>
+<body>
+
+	<!-- 
+		view => 12131
+		model => 12131
+		3个 view
+		数据是双向绑定的
+	 -->
+	<input type="text" ng-model="name" value="22">
+	<input type="text" ng-model="name" value="22">
+	<div class="box" ng-model="name">123</div>
+	<!-- angular的表达式 -->
+	{{100+200}}
+	{{name}}
+	{{"name"}}
+	<script type="text/javascript" src="../../vendor/angular/angular.min.js"></script>
+	<script>
+		//js 表达式
+		var string = 'alert(1+2)';
+		eval(string);
+	</script>
+</body>
+</html>

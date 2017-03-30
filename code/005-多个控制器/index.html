@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ng-bind</title>
+</head>
+<body>
+	<div  ng-app="">
+		<div  ng-controller="firstController">
+			<input type="text" value="" ng-model="name">
+			
+			<div ng-controller="secondController">
+				<input type="text" value="" ng-model="name">
+			</div>
+		</div>
+	</div>
+	<script>
+		function first(){
+			var name ="张三";
+			alert(age)
+			function second(){
+				var age = 30;
+				var name = '张三121212'
+				alert(name)
+			}
+		}
+	</script>
+		<script type="text/javascript" src="app/index.js"></script> 
+	<!-- <script type="text/javascript" src="../../vendor/angular/angular.min.js"></script> -->
+	<script type="text/javascript" src="../../vendor/angular-v1.2.x/angular.min.js"></script>
+
+</body>
+</html>

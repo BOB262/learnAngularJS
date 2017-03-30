@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>006-$scope里$apply方法</title>
+</head>
+<body>
+	<div  ng-app="">
+		<div  ng-controller="firstController">
+		
+			{{date}}			
+		</div>
+	</div>
+	<div id="a">
+		obj.b...
+	</div>
+	<script>
+		var obj = {
+			b:300,
+			set : function(key,val){
+				obj[key] = val;
+				document.querySelector('a').innerHTML = val;
+			}
+		}
+
+		obj.set('b',300)
+	</script>
+		<script type="text/javascript" src="app/index.js"></script> 
+	<!-- <script type="text/javascript" src="../../vendor/angular/angular.min.js"></script> -->
+	<script type="text/javascript" src="../../vendor/angular-v1.2.x/angular.min.js"></script>
+
+</body>
+</html>
